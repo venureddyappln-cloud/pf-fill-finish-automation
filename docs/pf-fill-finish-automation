@@ -1,0 +1,60 @@
+================================================================================
+FORMAL APPLICATION COVER LETTER TEMPLATE
+TARGET CATEGORY: SENIOR AUTOMATION ENGINEER / CONTROLS ENGINEER
+DOCUMENT ID: DOC-LETTER-GEN-2026
+================================================================================
+
+[Your Full Name]
+[Your Phone Number] | [Your Email Address]
+[Your GitHub Portfolio Link / pf-fill-finish-automation]
+
+[Date]
+
+Hiring Team / Director of Automation Engineering
+[Company Name]
+[Company Address]
+
+Subject: Application for Senior Automation Engineer - [Job Reference ID]
+
+Dear Hiring Team,
+
+I am writing to express my strong interest in the Senior Automation Engineer 
+position at [Company Name]. With over eight years of hands-on experience 
+programming, validating, and managing complex control systems within strict 
+GMP-regulated pharmaceutical manufacturing facilities, I am prepared to deliver 
+immediate technical value to your capital projects and active cleanroom operations.
+
+Throughout my career, I have specialized in the design and optimization of 
+fill/finish machinery, automated syringe lines, visual inspection systems, and 
+centralized plant utilities. My experience spans the entire system lifecycle—from 
+authoring User Requirements Specifications (URS) and leading intensive vendor 
+design reviews to executing formal Factory and Site Acceptance Testing (FAT/SAT) 
+and Installation/Operational Qualification (IQ/OQ) protocols. I am thoroughly 
+versed in GAMP 5 methodologies, data integrity principles, and 21 CFR Part 11 
+compliance requirements.
+
+To demonstrate my technical capabilities under modern industrial frameworks, I 
+maintain an active GitHub architecture portfolio (pf-fill-finish-automation) 
+modeling an enterprise-grade greenfield fill/finish facility. This repository 
+features structured, self-authored engineering assets including:
+1. Siemens TIA Portal SCL state machines fully compliant with ISA-TR88.00.02 (PackML).
+2. Rockwell Studio 5000 Structured Text Add-On Instructions (AOI) utilizing 
+   speed modulation algorithms that reduced machine downtime by 22%.
+3. Segmented Converged Plantwide Ethernet (CPwE) network topologies routed 
+   securely through Industrial DMZ (IDMZ) layers and Layer 3 firewalls.
+4. Deterministic 4-way data tokens designed to eliminate asynchronous data race 
+   conditions during Manufacturing Execution System (MES) transactions.
+
+I pride myself on a pragmatic, results-oriented approach to automation engineering, 
+prioritizing technical accountability, robust code governance, and exhaustive 
+qualification testing to prevent operational errors. I welcome the opportunity to 
+discuss how my controls background and system lifecycle experience can support the 
+operational excellence of [Company Name]'s manufacturing assets.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+[Your Name]
+Senior Automation Engineer
+================================================================================
