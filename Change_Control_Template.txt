@@ -1,0 +1,68 @@
+================================================================================
+GMP CHANGE CONTROL REQUEST (CCR) TEMPLATE
+DOCUMENT ID: QA-CCR-AUTO-001
+REVISION: 1.0.0
+COMPLIANCE MATRIX: GAMP 5 SYSTEM LIFECYCLE / 21 CFR PART 11 DESIGN CONTROLS
+================================================================================
+
+1. CHANGE INITIATION SUMMARY
+--------------------------------------------------------------------------------
+Date of Request: [DD-MMM-YYYY]            Originator Title: Automation Engineer
+System ID / Asset Tag: [e.g., SYR-FILL-01] Facility Location: Cleanroom Zone A
+
+Change Class (Check One):
+[ ] MAJOR   (Impacts validated state, product quality, or 21 CFR Part 11 status)
+[ ] MINOR   (Like-for-like component replacement, no logic modification)
+[ ] EMERGENCY (Critical production stoppage; requires immediate QA verbal sign-off)
+
+
+2. DESCRIPTION OF REASON FOR CHANGE
+--------------------------------------------------------------------------------
+Current State Assessment:
+[Describe the current issue, bottleneck, or race condition being observed in the 
+production loop or system logic.]
+
+Proposed Modification:
+[Provide step-by-step description of the proposed PLC logic updates, HMI tag 
+modifications, or hardware network IP routing adjustments.]
+
+
+3. REGULATORY AND DATA INTEGRITY IMPACT ASSESSMENT
+--------------------------------------------------------------------------------
+Q3.1: Does this modification alter a Critical Process Parameter (CPP)?  [Yes / No]
+Q3.2: Does it modify data pipelines storing electronic batch records?   [Yes / No]
+Q3.3: Is a software compile required that breaks system checksums?     [Yes / No]
+
+* If YES to any question above, formal pre-execution validation testing is MANDATORY.
+
+
+4. PRE-APPROVED VALIDATION TESTING PROTOCOL (DRY-RUN / IQ / OQ)
+--------------------------------------------------------------------------------
+Test Scenario ID | Test Step / Input Action      | Expected Verifiable Outcome
+-----------------+-------------------------------+------------------------------
+TS-01            | [Simulate fault state/input]  | [Verify expected safety stop]
+TS-02            | [Execute network disconnect]  | [Verify data cache retention]
+TS-03            | [Ramp buffer sensor variable] | [Verify speed modulation loop]
+
+
+5. SYSTEM ROLLBACK PROCEDURE (CONTINGENCY PLAN)
+--------------------------------------------------------------------------------
+If validation testing fails post-modification, execute the following steps:
+1. Isolate the asset controller and switch the processor key switch to PROGRAM mode.
+2. Open the last archived, validated system image file: [Backup_Filename_vX.X.acd/.ap18]
+3. Download the baseline code version to restore identical pre-change parameters.
+4. Perform an online validation sanity check to verify system recovery.
+
+
+6. SIGN-OFF & STRUCTURAL APPROVAL ROUTING
+--------------------------------------------------------------------------------
+Prepared By (Automation Engineering): ______________________  Date: ___________
+
+Pre-Execution Approved By (Operations): ___________________  Date: ___________
+
+Pre-Execution Approved By (Quality Assurance): _____________  Date: ___________
+
+Post-Execution Final Approval (Quality Assurance): _________  Date: ___________
+================================================================================
+[END OF CHANGE CONTROL DESIGN DATA]
+================================================================================
