@@ -1,10 +1,8 @@
-================================================================================
 SYSTEM ARCHITECTURE DOCUMENTATION: IT/OT CONVERGED NETWORK PLATFORM
 PROJECT: GREENFIELD PHARMACEUTICAL FILL/FINISH DRUG-PRODUCT FACILITY
 REVISION: 1.0.0
 VALIDATION STATUS: DRAFT FOR OQ REVIEW
 COMPLIANCE LAYER: GAMP 5 CATEGORY 4 / 21 CFR PART 11 DATA INTEGRITY
-================================================================================
 
 1. CONVERGED PLANTWIDE ETHERNET (CPwE) HIGH-LEVEL NETWORKING TOPOLOGY
 --------------------------------------------------------------------------------
