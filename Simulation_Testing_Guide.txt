@@ -1,0 +1,61 @@
+================================================================================
+LOCAL EMULATION & CONTROLLER SIMULATION GUIDE
+PROJECT: GREENFIELD PHARMACEUTICAL FILL/FINISH DRUG-PRODUCT FACILITY
+FILE PATH: docs/validation/Simulation_Testing_Guide.txt
+VALIDATION STATE: ARCHITECTURAL TESTING ONLY (DRY-RUN ANCHOR)
+================================================================================
+
+1. OVERVIEW
+--------------------------------------------------------------------------------
+This guide outlines the procedure to instantiate local virtual controllers for 
+dry-run software validation. Emulating the runtime environment allows engineers 
+to catch boundary errors, test state machines, and challenge safety interlocks 
+prior to loading code onto physical cleanroom hardware.
+
+
+2. ROCKWELL LOGIX ECHO EMULATION METHODOLOGY (Studio 5000 v35+)
+--------------------------------------------------------------------------------
+To test the conveyor accumulator logic block (AOI_AccumulatorBuffer) locally:
+
+Step 2.1: Open the FactoryTalk Logix Echo dashboard.
+Step 2.2: Create a virtual chassis slot matching your project hardware configuration.
+          - Controller Profile: ControlLogix 5580 (L85E equivalent)
+          - Set Virtual IP: 127.0.0.1 (or local loopback range)
+Step 2.3: Open your main control project file inside Studio 5000 Logix Designer.
+Step 2.4: Change the communications path to point directly to the virtual 
+          Logix Echo slot location.
+Step 2.5: Switch the controller connection state to "Go Online" and download the 
+          program structure.
+Step 2.6: Toggle variables 'i_Buffer_High_Limit_Sensor' and 'i_Buffer_Low_Limit_Sensor' 
+          manually to observe the speed modulation feedback loop values.
+
+
+3. SIEMENS S7-PLCSIM ADVANCED VALIDATION MECHANISM (TIA Portal v18+)
+--------------------------------------------------------------------------------
+To validate the PackML state engine block (FB_PackML_State_Machine) locally:
+
+Step 3.1: Launch the S7-PLCSIM Advanced interface engine.
+Step 3.2: Configure the local communication interface properties:
+          - Online Access Option: PLCSIM Virtual Ethernet Adapter
+          - TCP/IP Communication Path: Local Network Adapter Selection
+Step 3.3: Define a virtual instance identity:
+          - Instance Name: Virtual_Inspection_Skid
+          - PLC Type: S7-1500 / IP Address assigned: 192.168.1.10
+Step 3.4: Click "Power On" to initialize the simulated memory module blocks.
+Step 3.5: Return to your active TIA Portal development suite platform.
+Step 3.6: Right-click the Device Folder structure, click "Download to Device", 
+          and select your virtual network adapter target path.
+Step 3.7: Open a local Watch Table to change input commands ('i_Cmd_Abort', 
+          'i_Cmd_Start') and verify exact compliance with ISA-TR88.00.02 states.
+
+
+4. ERROR REPORTING AND ANOMALY TRACKING LOG
+--------------------------------------------------------------------------------
+If a simulated state sequence stalls or throws an anomalous execution trap:
+1. Verify that your local network interface does not have active port blocks 
+   interfering with TCP 102 (Siemens S7) or TCP 44818 (Rockwell EtherNet/IP).
+2. Take a diagnostic memory snapshot dump from the virtual controller engine panel.
+3. Reference your project GxP Change Control form before editing any core blocks.
+================================================================================
+[END OF SIMULATION TESTING MANUAL CORE]
+================================================================================
