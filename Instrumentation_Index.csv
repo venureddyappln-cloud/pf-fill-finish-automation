@@ -1,0 +1,18 @@
+================================================================================
+INSTRUMENTATION INDEX & FIELD DEVICE LAYOUT
+PROJECT: GREENFIELD PHARMACEUTICAL FILL/FINISH DRUG-PRODUCT FACILITY
+FILE PATH: plc/hardware-config/instrumentation_list.csv
+VALIDATION STATE: DESIGN REVIEW (IQ ANCHOR)
+================================================================================
+Tag_ID,Description,Location,Signal_Type,Communication_Protocol,Calibrated_Range,Safety_Interlock_Class
+FIT-101,Peristaltic Pump Liquid Flow Meter,Filling Line Node A,4-24mA Analog Input,EtherNet/IP (CIP Sync),0.5 to 50.0 mL/sec,Class A - Critical Process Parameter
+PIT-102,Cleanroom Nitrogen Overpressure Transmitter,Capping Isolation Barrier,0-10V Analog Input,PROFINET,0.0 to 5.0 bar,Class B - Operating Limit
+TE-103,Product Surge Tank Temperature Element,Main Formulation Buffer,RTD (Pt100) Direct Input,OPC UA Bridged,2.0 to 8.0 degC,Class A - Product Stability Monitor
+LIT-104,Syringe Liquid Buffer Level Sensor,Vial Feed Staging Loop,Ultrasonic Analog,EtherNet/IP,0.0 to 100.0 mm,Class C - Operational Limit
+ZS-201A,Perimeter Guard Interlock Switch A,Filling Enclosure Access Door 1,Dual-Channel Safety PNP,Local Safety Relay Link,Open/Closed Binary,Class A - Life Safety Critical
+ZS-201B,Perimeter Guard Interlock Switch B,Filling Enclosure Access Door 2,Dual-Channel Safety PNP,Local Safety Relay Link,Open/Closed Binary,Class A - Life Safety Critical
+AV-301,CIP Steam Sterilization Control Valve,Sanitization Feed Loop,Digital Solid State Output,PROFINET (PROFIsafe),Open/Closed Command,Class B - Sequence Interlock
+EBR-TKN,Electronic Batch Record Sync Pointer,SCADA Transaction Node,Data Register Hex Token,OPC UA Secure Architecture,0000 to FFFF Handshake,Class A - 21 CFR Part 11 Compliance
+================================================================================
+[END OF INSTRUMENTATION DATA MATRIX]
+================================================================================
